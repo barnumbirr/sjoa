@@ -10,6 +10,8 @@
 > and <a href="https://www.oars.com/blog/best-whitewater-rafting-in-europe/">OARS</a>
 > </p>
 
+## Installation
+
 ```bash
 $ pip install sjoa
 ```
