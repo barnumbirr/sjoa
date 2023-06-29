@@ -6,19 +6,25 @@ from .utils import _get_version
 def _init_parser():
     parser = argparse.ArgumentParser(
         prog='sjoa',
-        description='%(prog)s is a command-line tool to read metadata from torrent files or magnet URLs.',
+        description='%(prog)s is a powerful command-line tool designed to read metadata from torrent files or magnet URIs.',
         epilog='Report bugs to https://github.com/barnumbirr/sjoa/issues',
         add_help=False)
-    parser.add_argument(
-        'input_torrent',
-        metavar='PATH / MAGNET_URL',
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument(
+        "-t",
+        "--torrent",
         type=str,
-        help='Path to torrent file or magnet URL.')
+        help='Path to torrent file.')
+    group.add_argument(
+        "-m",
+        "--magnet",
+        type=str,
+        help='Magnet URI.')
     parser.add_argument(
         '-h',
         '--help',
         action='help',
-        help='Show this help log.')
+        help='Show this help message and exit.')
     parser.add_argument(
         '-v',
         '--version',

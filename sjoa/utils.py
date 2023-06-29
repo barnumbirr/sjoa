@@ -15,13 +15,11 @@ def _get_version():
 
 def _convert_bytes(size, decimals):
     units = ["bytes", "KiB", "MiB", "GiB", "TiB"]
-    unit_index = 0
-    while size >= 1024 and unit_index < len(units) - 1:
+    index = 0
+    while size >= 1024 and index < len(units) - 1:
         size /= 1024
-        unit_index += 1
-    rounded_size =f"{size:.{decimals}f}"
-    unit = units[unit_index]
-    return f"{rounded_size} {unit}"
+        index += 1
+    return f"{size:.{decimals}f} {units[index]}"
 
 def _display_data(data):
     optional_keys = ['name', 'hash', 'created', 'comment', 'pieces']

@@ -1,6 +1,8 @@
 # sjoa
 
-`sjoa` is a command-line tool to read metadata from torrent files or magnet URLs.
+`sjoa` is a powerful command-line tool designed to read metadata from torrent
+files or magnet URIs. It provides a simple and efficient way to extract
+information about torrents without the need to download the actual content.
 
 > The Sjoa is a river in Innlandet county, Norway and is one of the best
 > whitewater rafting rivers in Europe.
@@ -12,14 +14,19 @@
 
 ## Installation
 
+`sjoa` is implemented in Python and can be installed using pip, the Python
+package manager. To install `sjoa`, simply run:
+
 ```bash
 $ pip install sjoa
 ```
 
 ## Usage
 
+Once installed, you can use `sjoa` from the command line.
+
 ```
-$ sjoa debian-12.0.0-amd64-DVD-1.iso.torrent
+$ sjoa -t debian-12.0.0-amd64-DVD-1.iso.torrent
 Name: debian-12.0.0-amd64-DVD-1.iso
 Hash: b1680a55cfc8693c6c02de732dd17c33e251e8e5
 Created: 2023-06-10 12:01:18 by mktorrent 1.1
@@ -36,7 +43,7 @@ Files: (3.66 GiB)
 ```
 
 ```
-$ sjoa "magnet:?xt=urn:btih:2c6b6858d61da9543d4231a71db4b1c9264b0685&dn=ubuntu-22.04-desktop-amd64.iso&tr=https%3A%2F%2Ftorrent.ubuntu.com%2Fannounce&tr=https%3A%2F%2Fipv6.torrent.ubuntu.com%2Fannounce"
+$ sjoa -m "magnet:?xt=urn:btih:2c6b6858d61da9543d4231a71db4b1c9264b0685&dn=ubuntu-22.04-desktop-amd64.iso&tr=https%3A%2F%2Ftorrent.ubuntu.com%2Fannounce&tr=https%3A%2F%2Fipv6.torrent.ubuntu.com%2Fannounce"
 Name: ubuntu-22.04-desktop-amd64.iso
 Hash: 2c6b6858d61da9543d4231a71db4b1c9264b0685
 Tracker URLs:
