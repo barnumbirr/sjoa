@@ -5,12 +5,17 @@ files or magnet URIs. It provides a simple and efficient way to extract
 information about torrents without the need to download the actual content.
 
 > The Sjoa is a river in Innlandet county, Norway and is one of the best
-> whitewater rafting rivers in Europe.
+> whitewater rafting rivers in Europe renowned for its fast-moving, turbulent
+> waters with Class II-V rapids depending on the water level.
 >
 > <p style="font-size: 12px" align="right">
 >     Source: <a href="https://en.wikipedia.org/wiki/Sjoa">Wikipedia</a>
 > and <a href="https://www.oars.com/blog/best-whitewater-rafting-in-europe/">OARS</a>
 > </p>
+
+The word `sjoa` was chosen as a play on words: the term "torrent" is often used
+to describe a fast-flowing stream or river, typically characterized by strong
+currents and rapid water movement.
 
 ## Installation
 
