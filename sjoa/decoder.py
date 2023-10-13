@@ -42,12 +42,6 @@ def _ps_torrent(file):
     if webseeds:
         metadata['webseeds'] = [webseed.decode() for webseed in webseeds]
 
-    piece_length = decoded_data.get(b'info', {}).get(b'piece length')
-    pieces = decoded_data.get(b'info', {}).get(b'pieces')
-    if piece_length and pieces:
-        piece_length_size = _convert_bytes(piece_length, 0)
-        metadata['pieces'] = f"\n  {len(pieces) // 20} of length {piece_length_size}"
-
     file_list = []
     total_torrent_size = 0
     files = decoded_data.get(b'info', {}).get(b'files')
@@ -71,6 +65,15 @@ def _ps_torrent(file):
 
     metadata['files'] = file_list
     metadata['total_torrent_size'] = _convert_bytes(total_torrent_size, 2)
+
+    piece_length = decoded_data.get(b'info', {}).get(b'piece length')
+    pieces = decoded_data.get(b'info', {}).get(b'pieces')
+    if piece_length and pieces:
+       piece_length_size = _convert_bytes(piece_length, 0)
+       num_pieces = len(pieces) // 20
+       last_piece_size = total_torrent_size - (num_pieces - 1) * piece_length
+       last_piece_size = _convert_bytes(last_piece_size, 2)
+       metadata['pieces'] = f"\n  {num_pieces} of length {piece_length_size} (last piece {last_piece_size})"
 
     return _display_data(metadata)
 
