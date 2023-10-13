@@ -1,0 +1,24 @@
+magnet:?xt=urn:btih:4becb8a45de3e22284ca94483a2e430b6949e5a5&dn=Example%20File&xl=5242880&tr=http%3A%2F%2Ftracker1.example.com%2Fannounce&tr=http%3A%2F%2Ftracker2.example.com%2Fannounce&ws=http%3A%2F%2Fexample.com%2Ffiles%2Fexample_file1.txt&ws=http%3A%2F%2Fexample.com%2Ffiles%2Fexample_file2.txt&as=http%3A%2F%2Fexample.com%2Ffiles%2Fexample_file1.txt&as=http%3A%2F%2Fexample.com%2Ffiles%2Fexample_file2.txt&xs=http%3A%2F%2Fexample.com%2Ffiles%2Fexample_file.txt&kt=keyword1%2Ckeyword2%2Ckeyword3&mt=audio%2Fmp3&so=1024&x.pe=example%3Aparam
+
+{
+   "hash":"4becb8a45de3e22284ca94483a2e430b6949e5a5",
+   "name":"Example File",
+   "size":"5.00 MiB",
+   "trackers":[
+      "http://tracker1.example.com/announce",
+      "http://tracker2.example.com/announce"
+   ],
+   "webseeds":[
+      "http://example.com/files/example_file1.txt",
+      "http://example.com/files/example_file2.txt"
+   ],
+   "acceptable_sources":[
+      "http://example.com/files/example_file1.txt",
+      "http://example.com/files/example_file2.txt"
+   ],
+   "exact_sources":"http://example.com/files/example_file.txt",
+   "keywords":"keyword1,keyword2,keyword3",
+   "manifests":"audio/mp3",
+   "selects":"1024",
+   "peers":"example:param"
+}

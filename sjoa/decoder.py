@@ -82,16 +82,30 @@ def _ps_magnet(link):
     ps_magnet_url = urllib.parse.urlparse(link)
     query_params = urllib.parse.parse_qs(ps_magnet_url.query)
 
-    _hash = query_params['xt'][0].split(':')[-1]
-    if _hash:
-        metadata['hash'] = _hash
+    key_mapping = {
+        'xt': 'hash',
+        'dn': 'name',
+        'xl': 'size',
+        'tr': 'trackers',
+        'ws': 'webseeds',
+        'as': 'acceptable_sources',
+        'xs': 'exact_sources',
+        'kt': 'keywords',
+        'mt': 'manifests',
+        'so': 'selects',
+        'x.pe': 'peers'
+    }
 
-    name = query_params['dn'][0]
-    if name:
-        metadata['name'] = name
+    for key, values in query_params.items():
+        decoded_values = [urllib.parse.unquote(value) for value in values]
+        if len(decoded_values) == 1:
+            decoded_values = decoded_values[0]
+        mapped_key = key_mapping.get(key, key)
+        if mapped_key == 'hash' and isinstance(decoded_values, str) and decoded_values.startswith('urn:btih:'):
+            decoded_values = decoded_values[len('urn:btih:'):]
+        if mapped_key == 'size':
+            decoded_values = _convert_bytes(int(decoded_values), 2)
 
-    announce_list = query_params.get('tr', [])
-    if announce_list:
-        metadata['trackers'] = announce_list
+        metadata[mapped_key] = decoded_values
 
     return _display_data(metadata)
