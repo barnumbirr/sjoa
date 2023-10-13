@@ -31,20 +31,20 @@ $ pip install sjoa
 Once installed, you can use `sjoa` from the command line.
 
 ```
-$ sjoa -t debian-12.0.0-amd64-DVD-1.iso.torrent
-Name: debian-12.0.0-amd64-DVD-1.iso
-Hash: b1680a55cfc8693c6c02de732dd17c33e251e8e5
-Created: 2023-06-10 12:01:18 by mktorrent 1.1
+$ sjoa -t examples/debian-12.2.0-amd64-DVD-1.iso.torrent
+Name: debian-12.2.0-amd64-DVD-1.iso
+Hash: 267d63ffd31770e467f8d985a86633f05502c10d
+Created: 2023-10-07 12:03:00 by mktorrent 1.1
 Comment: "Debian CD from cdimage.debian.org"
 Pieces:
-  14996 of length 256 KiB
-Tracker URLs:
+  15237 of length 256 KiB (last piece 64.00 KiB)
+Tracker URL(s):
   • http://bttracker.debian.org:6969/announce
-Webseed URLs:
-  • https://cdimage.debian.org/cdimage/release/12.0.0/amd64/iso-dvd/debian-12.0.0-amd64-DVD-1.iso
-  • https://cdimage.debian.org/cdimage/archive/12.0.0/amd64/iso-dvd/debian-12.0.0-amd64-DVD-1.iso
-Files: (3.66 GiB)
-  • debian-12.0.0-amd64-DVD-1.iso, Size: 3.66 GiB
+Webseed URL(s):
+  • https://cdimage.debian.org/cdimage/release/12.2.0/amd64/iso-dvd/debian-12.2.0-amd64-DVD-1.iso
+  • https://cdimage.debian.org/cdimage/archive/12.2.0/amd64/iso-dvd/debian-12.2.0-amd64-DVD-1.iso
+Files: (3.72 GiB)
+  • debian-12.2.0-amd64-DVD-1.iso, Size: 3.72 GiB
 ```
 
 ```
