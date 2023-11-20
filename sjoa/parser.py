@@ -8,6 +8,7 @@ def _init_parser():
         prog='sjoa',
         description='%(prog)s is a powerful command-line tool designed to read metadata from torrent files or magnet URIs.',
         epilog='Report bugs to https://github.com/barnumbirr/sjoa/issues',
+        formatter_class=lambda prog: argparse.HelpFormatter(prog, max_help_position=40),
         add_help=False)
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument(

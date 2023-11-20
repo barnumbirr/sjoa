@@ -4,7 +4,7 @@ import hashlib
 import datetime
 import bencodepy
 import urllib.parse
-from .utils import _convert_bytes, _display_data
+from .utils import _convert_bytes
 
 def _ps_torrent(file):
     metadata = {}
@@ -75,7 +75,7 @@ def _ps_torrent(file):
        last_piece_size = _convert_bytes(last_piece_size, 2)
        metadata['pieces'] = f"\n  {num_pieces} of length {piece_length_size} (last piece {last_piece_size})"
 
-    return _display_data(metadata)
+    return metadata
 
 def _ps_magnet(link):
     metadata = {}
@@ -108,4 +108,4 @@ def _ps_magnet(link):
 
         metadata[mapped_key] = decoded_values
 
-    return _display_data(metadata)
+    return metadata
