@@ -32,28 +32,26 @@ Once installed, you can use `sjoa` from the command line.
 
 ```
 $ sjoa -t examples/debian-12.2.0-amd64-DVD-1.iso.torrent
-Name: debian-12.2.0-amd64-DVD-1.iso
-Hash: 267d63ffd31770e467f8d985a86633f05502c10d
-Created: 2023-10-07 12:03:00 by mktorrent 1.1
-Comment: "Debian CD from cdimage.debian.org"
-Pieces:
-  15237 of length 256 KiB (last piece 64.00 KiB)
-Tracker URL(s):
-  • http://bttracker.debian.org:6969/announce
-Webseed URL(s):
-  • https://cdimage.debian.org/cdimage/release/12.2.0/amd64/iso-dvd/debian-12.2.0-amd64-DVD-1.iso
-  • https://cdimage.debian.org/cdimage/archive/12.2.0/amd64/iso-dvd/debian-12.2.0-amd64-DVD-1.iso
-Files: (3.72 GiB)
-  • debian-12.2.0-amd64-DVD-1.iso, Size: 3.72 GiB
+ Name            debian-12.2.0-amd64-DVD-1.iso
+ Hash            267d63ffd31770e467f8d985a86633f05502c10d
+ Size            3.72 GiB
+ Pieces          15237 of length 256 KiB (last piece 64.00 KiB)
+ Creation        2023-10-07 12:03:00 by mktorrent 1.1
+ Comment         "Debian CD from cdimage.debian.org"
+ Tracker URL(s)  • http://bttracker.debian.org:6969/announce
+ Webseed URL(s)  • https://cdimage.debian.org/cdimage/release/12.2.0/amd64/iso-dvd/debian-12.2.0-amd64-DVD-1.iso
+                 • https://cdimage.debian.org/cdimage/archive/12.2.0/amd64/iso-dvd/debian-12.2.0-amd64-DVD-1.iso
+ Files           ┌───────────────────────────────────────────────────────────────────────┬─────────────────────┐
+                 │ • debian-12.2.0-amd64-DVD-1.iso                                       │ 3.72 GiB            │
+                 └───────────────────────────────────────────────────────────────────────┴─────────────────────┘
 ```
 
 ```
 $ sjoa -m "magnet:?xt=urn:btih:2c6b6858d61da9543d4231a71db4b1c9264b0685&dn=ubuntu-22.04-desktop-amd64.iso&tr=https%3A%2F%2Ftorrent.ubuntu.com%2Fannounce&tr=https%3A%2F%2Fipv6.torrent.ubuntu.com%2Fannounce"
-Name: ubuntu-22.04-desktop-amd64.iso
-Hash: 2c6b6858d61da9543d4231a71db4b1c9264b0685
-Tracker URLs:
-  • https://torrent.ubuntu.com/announce
-  • https://ipv6.torrent.ubuntu.com/announce
+ Name            ubuntu-22.04-desktop-amd64.iso
+ Hash            2c6b6858d61da9543d4231a71db4b1c9264b0685
+ Tracker URL(s)  • https://torrent.ubuntu.com/announce
+                 • https://ipv6.torrent.ubuntu.com/announce
 ```
 
 ## License

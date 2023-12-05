@@ -10,7 +10,7 @@ with open('requirements.txt', 'r') as fi:
 
 setup(
     name='sjoa',
-    version='1.1.0',
+    version='1.2.0',
     author='Martin Simon',
     author_email='me@martinsimon.me',
     description='Command-line tool to read metadata from torrent files or magnet URLs.',
