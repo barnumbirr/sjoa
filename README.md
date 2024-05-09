@@ -57,7 +57,7 @@ $ sjoa -m "magnet:?xt=urn:btih:2c6b6858d61da9543d4231a71db4b1c9264b0685&dn=ubunt
 ## License
 
 ```
-Copyright 2023 Martin Simon
+Copyright 2023-2024 Martin Simon
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

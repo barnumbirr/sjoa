@@ -13,6 +13,7 @@ def _ps_torrent(file):
 
     metadata['hash'] = hashlib.sha1(bencodepy.encode(info)).hexdigest() if info else None
     metadata['name'] = info.get(b'name').decode() if info.get(b'name') else None
+    metadata['private'] = info.get(b'private') if info.get(b'private') else None
 
     creation = {}
     creation['date'] = datetime.datetime.utcfromtimestamp(
