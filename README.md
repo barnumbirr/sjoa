@@ -38,6 +38,7 @@ $ sjoa -t examples/debian-12.2.0-amd64-DVD-1.iso.torrent
  Pieces          15237 of length 256 KiB (last piece 64.00 KiB)
  Creation        2023-10-07 12:03:00 by mktorrent 1.1
  Comment         "Debian CD from cdimage.debian.org"
+ Private         False
  Tracker URL(s)  • http://bttracker.debian.org:6969/announce
  Webseed URL(s)  • https://cdimage.debian.org/cdimage/release/12.2.0/amd64/iso-dvd/debian-12.2.0-amd64-DVD-1.iso
                  • https://cdimage.debian.org/cdimage/archive/12.2.0/amd64/iso-dvd/debian-12.2.0-amd64-DVD-1.iso
