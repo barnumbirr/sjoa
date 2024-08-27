@@ -1,4 +1,7 @@
-# sjoa
+<p align="center"><img src="./assets/sjoa.jpg" width=240></img></p>
+<p align="center"><i>illustration generated using <a href="https://perchance.org/ai-pixel-art-generator">perchance.org</a></i></p>
+
+<h1 align="center">sjoa</h1>
 
 `sjoa` is a powerful command-line tool designed to read metadata from torrent
 files or magnet URIs. It provides a simple and efficient way to extract
