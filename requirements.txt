@@ -1,2 +1,0 @@
-bencodepy==0.9.5
-rich==13.8.0

@@ -1,22 +1,11 @@
-#!/usr/bin/env python3
+from __future__ import annotations
 
-import sys
-if sys.version_info >= (3, 8):
-    from importlib import metadata
-else:
-    import importlib_metadata as metadata
+_BYTE_UNITS = ("bytes", "KiB", "MiB", "GiB", "TiB")
 
-def _get_version():
-    try:
-        version = metadata.version('sjoa')
-    except:
-        version = None
-    return version
 
-def _convert_bytes(size, decimals):
-    units = ["bytes", "KiB", "MiB", "GiB", "TiB"]
-    index = 0
-    while size >= 1024 and index < len(units) - 1:
+def _convert_bytes(size: int | float, decimals: int) -> str:
+    for unit in _BYTE_UNITS:
+        if size < 1024 or unit == _BYTE_UNITS[-1]:
+            return f"{size:.{decimals}f} {unit}"
         size /= 1024
-        index += 1
-    return f"{size:.{decimals}f} {units[index]}"
+    return ""  # unreachable, satisfies type checker

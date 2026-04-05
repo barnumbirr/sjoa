@@ -3,6 +3,9 @@
 
 <h1 align="center">sjoa</h1>
 
+[![PyPI](https://img.shields.io/pypi/v/sjoa)](https://pypi.org/project/sjoa/)
+[![Python](https://img.shields.io/pypi/pyversions/sjoa)](https://pypi.org/project/sjoa/)
+
 `sjoa` is a powerful command-line tool designed to read metadata from torrent
 files or magnet URIs. It provides a simple and efficient way to extract
 information about torrents without the need to download the actual content.
@@ -58,10 +61,23 @@ $ sjoa -m "magnet:?xt=urn:btih:2c6b6858d61da9543d4231a71db4b1c9264b0685&dn=ubunt
                  • https://ipv6.torrent.ubuntu.com/announce
 ```
 
+Use `-j` to output metadata as JSON (useful for scripting):
+
+```
+$ sjoa -t examples/debian-12.2.0-amd64-DVD-1.iso.torrent -j | jq '.hash'
+"267d63ffd31770e467f8d985a86633f05502c10d"
+```
+
+Read from stdin with `-`:
+
+```
+$ cat examples/debian-12.2.0-amd64-DVD-1.iso.torrent | sjoa -t -
+```
+
 ## License
 
 ```
-Copyright 2023-2024 Martin Simon
+Copyright 2023-2026 Martin Simon
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
